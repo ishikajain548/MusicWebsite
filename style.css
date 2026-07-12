@@ -8,6 +8,16 @@ body{
     background-color: rgb(39, 36, 36);
     color:#ccc
 }
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     padding: 15px 30px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+}
 #container{
     display: flex;
     flex-wrap: wrap;
@@ -72,4 +82,50 @@ li{
 
 .card button:hover{
     background-color: grey;
+}
+.heading{
+    text-align: center;
+    padding: 25px;
+    color:azure;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+}
+
+#music-container{
+    width: 90%;
+    margin: 40px auto;
+}
+
+.songD{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #504c4c;
+    padding: 15px 20px;
+    margin-bottom: 5px;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+
+.songD h3{
+    margin: 0;
+}
+
+.songD p{
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(224, 215, 215);
+}
+
+.songD button{
+    padding: 10px 18px;
+    background-color: rgba(6, 6, 6, 0.54);
+    color: white;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.songD button:hover{
+    background:grey
 }

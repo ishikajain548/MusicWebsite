@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>MyMusicPlayer</title>
+    <title>Music List</title>
 </head>
 <body>
     <div class="nav">
@@ -13,16 +13,21 @@
         <ul>
             <img src="images/icon.png" alt="logo" class="logo-img">
             <li><a href="index.html">Home</a></li>
-            
             <li><a href="music.html">All Songs</a></li>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search songs..">
+            </div>
         </ul>
         </nav>
     </div>
-    <section>
-        <div id="container">
-          
+    <div class="container">
+       <div class="header">
+          <h3>Title</h3>
+          <h3>Artist</h3>
+          <h3>Song</h3>
         </div>
-    </section>
-    <script src="script.js"></script>
+        <div id="song-list"></div>
+    </div>
+    <script src="music.js"></script>
 </body>
 </html>

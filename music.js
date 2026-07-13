@@ -1,336 +1,393 @@
-     const songs = [
-  
+let songs = [
   {
-    id:1,
+    id: 1,
     genre: "K-pop Music",
     title: "Dynamite",
     artist: "BTS",
-    youtubeLink: "https://www.youtube.com/watch?v=gdZLi9oWNZg"
+    youtubeLink: "https://www.youtube.com/watch?v=gdZLi9oWNZg",
   },
   {
-    id:2,
+    id: 2,
     genre: "K-pop Music",
     title: "How You Like That",
     artist: "BLACKPINK",
-    youtubeLink: "https://www.youtube.com/watch?v=ioNng23DkIM"
+    youtubeLink: "https://www.youtube.com/watch?v=ioNng23DkIM",
   },
   {
-    id:3,
+    id: 3,
     genre: "K-pop Music",
     title: "Love Dive",
     artist: "IVE",
-    youtubeLink: "https://www.youtube.com/watch?v=l-jZOXa7gQY"
+    youtubeLink: "https://www.youtube.com/watch?v=l-jZOXa7gQY",
   },
   {
-    id:4,
+    id: 4,
     genre: "K-pop Music",
     title: "God's Menu",
     artist: "Stray Kids",
-    youtubeLink: "https://www.youtube.com/watch?v=TQTlCHxyuu8"
+    youtubeLink: "https://www.youtube.com/watch?v=TQTlCHxyuu8",
   },
   {
-        id:5,
+    id: 5,
     genre: "K-pop Music",
     title: "Hype Boy",
     artist: "NewJeans",
-    youtubeLink: "https://www.youtube.com/watch?v=11cta61wi0g"
+    youtubeLink: "https://www.youtube.com/watch?v=11cta61wi0g",
   },
 
-  
-  {    id:6,
+  {
+    id: 6,
     genre: "Bollywood Music",
     title: "Kesariya",
     artist: "Arijit Singh",
-    youtubeLink: "https://www.youtube.com/watch?v=BddP6PYo2gs"
+    youtubeLink: "https://www.youtube.com/watch?v=BddP6PYo2gs",
   },
   {
-        id:7,
+    id: 7,
     genre: "Bollywood Music",
     title: "Tumhi Ho Bandhu",
     artist: "Pritam",
-    youtubeLink: "https://www.youtube.com/watch?v=o1RducJbUdc"
+    youtubeLink: "https://www.youtube.com/watch?v=o1RducJbUdc",
   },
   {
-       id:8,
+    id: 8,
     genre: "Bollywood Music",
     title: "Raataan Lambiyan",
     artist: "Jubin Nautiyal & Asees Kaur",
-    youtubeLink: "https://www.youtube.com/watch?v=gvyUuxdRdR4"
+    youtubeLink: "https://www.youtube.com/watch?v=gvyUuxdRdR4",
   },
   {
-       id:9,
+    id: 9,
     genre: "Bollywood Music",
     title: "Kabhi Kabhi Aditi",
     artist: "A.R Rahman",
-    youtubeLink: "https://www.youtube.com/watch?v=AX7t8ZwroHQ"
+    youtubeLink: "https://www.youtube.com/watch?v=AX7t8ZwroHQ",
   },
   {
-       id:10,
+    id: 10,
     genre: "Bollywood Music",
     title: "Kal Ho Naa Ho",
     artist: "Sonu Nigam",
-    youtubeLink: "https://www.youtube.com/watch?v=g0eO74UmRBs"
+    youtubeLink: "https://www.youtube.com/watch?v=g0eO74UmRBs",
   },
 
-  
   {
-    id:11,
+    id: 11,
     genre: "Classical Music",
     title: "Canon in D",
     artist: "Johann Pachelbel",
-    youtubeLink: "https://www.youtube.com/watch?v=Ptk_1Dc2iPY"
+    youtubeLink: "https://www.youtube.com/watch?v=Ptk_1Dc2iPY",
   },
   {
-    id:12,
+    id: 12,
     genre: "Classical Music",
     title: "Für Elise",
     artist: "Ludwig van Beethoven",
-    youtubeLink: "https://www.youtube.com/watch?v=q9bU12gXUyM"
+    youtubeLink: "https://www.youtube.com/watch?v=q9bU12gXUyM",
   },
   {
-    id:13,
+    id: 13,
     genre: "Classical Music",
     title: "The Four Seasons: Spring",
     artist: "Antonio Vivaldi",
-    youtubeLink: "https://www.youtube.com/watch?v=mFWQgxXM_b8"
+    youtubeLink: "https://www.youtube.com/watch?v=mFWQgxXM_b8",
   },
   {
-    id:14,
+    id: 14,
     genre: "Classical Music",
     title: "Moonlight Sonata",
     artist: "Ludwig van Beethoven",
-    youtubeLink: "https://www.youtube.com/watch?v=4Tr0otuiQuU"
+    youtubeLink: "https://www.youtube.com/watch?v=4Tr0otuiQuU",
   },
   {
-    id:15,
+    id: 15,
     genre: "Classical Music",
     title: "Swan Lake",
     artist: "Pyotr Ilyich Tchaikovsky",
-    youtubeLink: "https://www.youtube.com/watch?v=9cNQFB0TDfY"
+    youtubeLink: "https://www.youtube.com/watch?v=9cNQFB0TDfY",
   },
 
-  
   {
-       id:16,
-      genre: "Hip-Hop Music",
+    id: 16,
+    genre: "Hip-Hop Music",
     title: "Not Like Us",
     artist: "Kendrick Lamar",
-    youtubeLink: "https://www.youtube.com/watch?v=H58vbez_m4E"
- },
+    youtubeLink: "https://www.youtube.com/watch?v=H58vbez_m4E",
+  },
   {
-       id:17,
+    id: 17,
     genre: "Hip-Hop Music",
     title: "SICKO MODE",
     artist: "Travis Scott",
-    youtubeLink: "https://www.youtube.com/watch?v=6ONRf7h3Mdk"
+    youtubeLink: "https://www.youtube.com/watch?v=6ONRf7h3Mdk",
   },
   {
-       id:18,
+    id: 18,
     genre: "Hip-Hop Music",
     title: "God's Plan",
     artist: "Drake",
-    youtubeLink: "https://www.youtube.com/watch?v=xpVfcZ0ZcFM"
+    youtubeLink: "https://www.youtube.com/watch?v=xpVfcZ0ZcFM",
   },
   {
-       id:19,
+    id: 19,
     genre: "Hip-Hop Music",
     title: "HUMBLE.",
     artist: "Kendrick Lamar",
-    youtubeLink: "https://www.youtube.com/watch?v=tvTRZJ-4EyI"
+    youtubeLink: "https://www.youtube.com/watch?v=tvTRZJ-4EyI",
   },
-  {   id:20,
-  genre: "Hip-Hop Music",
+  {
+    id: 20,
+    genre: "Hip-Hop Music",
     title: "Lose Yourself",
     artist: "Eminem",
-    youtubeLink: "https://www.youtube.com/watch?v=xFYQQPAOz7Y"
-},
+    youtubeLink: "https://www.youtube.com/watch?v=xFYQQPAOz7Y",
+  },
 
-  
   {
-       id:21,
+    id: 21,
     genre: "Instrumental Music",
     title: "River Flows in You",
     artist: "Yiruma",
-    youtubeLink: "https://www.youtube.com/watch?v=7maJOI3QMu0"
+    youtubeLink: "https://www.youtube.com/watch?v=7maJOI3QMu0",
   },
   {
-    id:22,
+    id: 22,
     genre: "Instrumental Music",
     title: "Experience",
     artist: "Ludovico Einaudi",
-    youtubeLink: "https://www.youtube.com/watch?v=eUDVUZZyA0M"
+    youtubeLink: "https://www.youtube.com/watch?v=eUDVUZZyA0M",
   },
   {
-    id:23,
+    id: 23,
     genre: "Instrumental Music",
     title: "Comptine d'un autre été",
     artist: "Yann Tiersen",
-    youtubeLink: "https://www.youtube.com/watch?v=PaXKf0JEzEA"
+    youtubeLink: "https://www.youtube.com/watch?v=PaXKf0JEzEA",
   },
   {
-    id:24,
+    id: 24,
     genre: "Instrumental Music",
     title: "Nuvole Bianche",
     artist: "Ludovico Einaudi",
-    youtubeLink: "https://www.youtube.com/watch?v=VUCI-1vIbUo"
+    youtubeLink: "https://www.youtube.com/watch?v=VUCI-1vIbUo",
   },
   {
-    id:25,
+    id: 25,
     genre: "Instrumental Music",
     title: "Kiss the Rain",
     artist: "Yiruma",
-    youtubeLink: "https://www.youtube.com/watch?v=imGaOIm5HOk"
+    youtubeLink: "https://www.youtube.com/watch?v=imGaOIm5HOk",
   },
 
-  
   {
-    id:26,
+    id: 26,
     genre: "Lo-Fi Music",
     title: "Snowman",
     artist: "WYS",
-    youtubeLink: "https://www.youtube.com/watch?v=1P5BSm_oFJg"
+    youtubeLink: "https://www.youtube.com/watch?v=1P5BSm_oFJg",
   },
   {
-    id:27,
+    id: 27,
     genre: "Lo-Fi Music",
     title: "Dream with tea",
     artist: "Lukrembo",
-    youtubeLink: "https://www.youtube.com/watch?v=t_0PQkXZxiE"
+    youtubeLink: "https://www.youtube.com/watch?v=t_0PQkXZxiE",
   },
   {
-    id:28,
+    id: 28,
     genre: "Lo-Fi Music",
     title: "Affection",
     artist: "Jinsang",
-    youtubeLink: "https://www.youtube.com/watch?v=NAkZ8gUXcIE"
+    youtubeLink: "https://www.youtube.com/watch?v=NAkZ8gUXcIE",
   },
   {
-    id:29,
+    id: 29,
     genre: "Lo-Fi Music",
     title: "Warm Nights",
     artist: "Lakey Inspired",
-    youtubeLink: "https://www.youtube.com/watch?v=rXYm8YLrZwU"
+    youtubeLink: "https://www.youtube.com/watch?v=rXYm8YLrZwU",
   },
   {
-    id:30,
+    id: 30,
     genre: "Lo-Fi Music",
     title: "Better Days",
     artist: "LAKEY INSPIRED",
-    youtubeLink: "https://www.youtube.com/watch?v=RXLzvo6kvVQ"
+    youtubeLink: "https://www.youtube.com/watch?v=RXLzvo6kvVQ",
   },
 
-  
   {
-    id:31,
+    id: 31,
     genre: "Pop Music",
     title: "Shape of You",
     artist: "Ed Sheeran",
-    youtubeLink: "https://www.youtube.com/watch?v=JGwWNGJdvx8"
+    youtubeLink: "https://www.youtube.com/watch?v=JGwWNGJdvx8",
   },
   {
-    id:32,
+    id: 32,
     genre: "Pop Music",
     title: "Blinding Lights",
     artist: "The Weeknd",
-    youtubeLink: "https://www.youtube.com/watch?v=4NRXx6U8ABQ"
+    youtubeLink: "https://www.youtube.com/watch?v=4NRXx6U8ABQ",
   },
   {
-    id:33,
+    id: 33,
     genre: "Pop Music",
     title: "Flowers",
     artist: "Miley Cyrus",
-    youtubeLink: "https://www.youtube.com/watch?v=G7KNmW9a75Y"
+    youtubeLink: "https://www.youtube.com/watch?v=G7KNmW9a75Y",
   },
   {
-    id:34,
+    id: 34,
     genre: "Pop Music",
     title: "Levitating",
     artist: "Dua Lipa",
-    youtubeLink:"https://www.youtube.com/watch?v=TUVcZfQe-Kw"
+    youtubeLink: "https://www.youtube.com/watch?v=TUVcZfQe-Kw",
   },
   {
-    id:35,
+    id: 35,
     genre: "Pop Music",
     title: "Bad Guy",
     artist: "Billie Eilish",
-    youtubeLink: "https://www.youtube.com/watch?v=DyDfgMOUjCI"
+    youtubeLink: "https://www.youtube.com/watch?v=DyDfgMOUjCI",
   },
 
-  
   {
-    id:36,
+    id: 36,
     genre: "Punjabi Songs",
     title: "Brown Munde",
     artist: "AP Dhillon, Gurinder Gill & Shinda Kahlon",
-    youtubeLink:"https://www.youtube.com/watch?v=VNs_cCtdbPc"
+    youtubeLink: "https://www.youtube.com/watch?v=VNs_cCtdbPc",
   },
   {
-    id:37,
+    id: 37,
     genre: "Punjabi Songs",
     title: "Excuses",
     artist: "AP Dhillon & Gurinder Gill",
-    youtubeLink: "https://www.youtube.com/watch?v=vX2cDW8LUWk"
+    youtubeLink: "https://www.youtube.com/watch?v=vX2cDW8LUWk",
   },
   {
-    id:38,
+    id: 38,
     genre: "Punjabi Songs",
     title: "295",
     artist: "Sidhu Moose Wala",
-    youtubeLink:"https://www.youtube.com/watch?v=n_FCrCQ6-bA"
+    youtubeLink: "https://www.youtube.com/watch?v=n_FCrCQ6-bA",
   },
   {
-    id:39,
+    id: 39,
     genre: "Punjabi Songs",
     title: "Insane",
     artist: "AP Dhillon",
-    youtubeLink:"https://www.youtube.com/watch?v=cqP8I5aaud8"
+    youtubeLink: "https://www.youtube.com/watch?v=cqP8I5aaud8",
   },
   {
-    id:40,
+    id: 40,
     genre: "Punjabi Songs",
     title: "GOAT",
     artist: "Diljit Dosanjh",
-    youtubeLink:"https://www.youtube.com/watch?v=cl0a3i2wFcc"
-  }
+    youtubeLink: "https://www.youtube.com/watch?v=cl0a3i2wFcc",
+  },
 ];
-   
-    const container = document.querySelector("#song-list");
-    
-    function displaySongs(songsArray){
-            container.innerHTML="";
-            songsArray.forEach((song)=>{
-            const songdiv=document.createElement("div");
-            songdiv.className="songD";
-            const p1=document.createElement("p");
-            p1.textContent=song.title;
-            const p2=document.createElement("p")
-            p2.textContent=song.artist;
-            const btn=document.createElement("button")
-            btn.textContent="View This Song";
-            btn.addEventListener("click",()=>{
-                window.location.href=`${song.youtubeLink}`
-            })
-            btn.className="bt"
-            songdiv.appendChild(p1);
-            songdiv.appendChild(p2);
-            songdiv.appendChild(btn);
-            container.appendChild(songdiv)
-        })
-    }
 
-    displaySongs(songs);
-    
+const container = document.querySelector("#song-list");
 
-        
-const search=document.getElementById("search")
-search.addEventListener("input",()=>{
-    const value = search.value.toLowerCase();
-     const resultSongs=songs.filter((song)=>{
-       return  song.title.toLowerCase().includes(value);
-     }
-    )
-    displaySongs(resultSongs)
-})
+const form = document.getElementById("insert-form");
 
+let editId = null;
 
+function displaySongs(songsArray) {
+  container.innerHTML = "";
+  songsArray.forEach((song) => {
+    const songdiv = document.createElement("div");
+    songdiv.className = "songD";
+    const p1 = document.createElement("p");
+    p1.textContent = song.title;
+    const p2 = document.createElement("p");
+    p2.textContent = song.artist;
+    const btn = document.createElement("button");
+    btn.textContent = "View This Song";
+    btn.addEventListener("click", () => {
+      window.location.href = `${song.youtubeLink}`;
+    });
+    btn.className = "bt";
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.id = "delete";
+    deleteBtn.addEventListener("click", () => {
+      songs = songs.filter((s) => s.id !== song.id);
+      displaySongs(songs);
+    });
+    const editBtn = document.createElement("button");
+    editBtn.textContent = "Edit";
+    editBtn.id = "edit";
+    editBtn.addEventListener("click", () => {
+       container.innerHTML = "";
+      header.innerHTML = "";
+      form.style.display = "block";
+      title.value = song.title;
+      artist.value = song.artist;
+      genre.value = song.genre;
+      youtubeLink.value = song.youtubeLink;
+      editId = song.id;
+    });
+    songdiv.appendChild(p1);
+    songdiv.appendChild(p2);
+    songdiv.appendChild(btn);
+    songdiv.appendChild(deleteBtn);
+    songdiv.appendChild(editBtn);
+    container.appendChild(songdiv);
+  });
+}
 
+displaySongs(songs);
+
+const search = document.getElementById("search");
+search.addEventListener("input", () => {
+  const value = search.value.toLowerCase();
+  const resultSongs = songs.filter((song) => {
+    return song.title.toLowerCase().includes(value);
+  });
+  displaySongs(resultSongs);
+});
+
+//insert and update form
+
+const header = document.querySelector(".header");
+
+const insertbtn = document.getElementById("insert");
+insertbtn.addEventListener("click", () => {
+  container.innerHTML = "";
+  header.innerHTML = "";
+  form.style.display = "block";
+  form.reset();
+  editId = null;
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let newTitle = title.value;
+  let newArtist = artist.value;
+  let newGenre = genre.value;
+  let newYoutubeLink = youtubeLink.value;
+  //it means that song has not yet added we can insert it
+  if (editId === null) {
+    const obj = {
+      id: songs.length + 1,
+      title: newTitle,
+      artist: newArtist,
+      genre: newGenre,
+      youtubeLink: newYoutubeLink,
+    };
+    songs.push(obj);
+  } else {
+    let editSong = songs.find((s) => s.id === editId);
+    editSong.title = newTitle;
+    editSong.artist = newArtist;
+    editSong.genre = newGenre;
+    editSong.youtubeLink = newYoutubeLink;
+    editId = null;
+  }
+
+  displaySongs(songs);
+  form.reset();
+  form.style.display = "none";
+});

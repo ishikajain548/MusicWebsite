@@ -17,6 +17,9 @@
             <div class="search-container">
                 <input type="text" id="search" placeholder="Search songs..">
             </div>
+            <div>
+                <button id="insert">Add Song</button>
+            </div>
         </ul>
         </nav>
     </div>
@@ -24,10 +27,42 @@
        <div class="header">
           <h3>Title</h3>
           <h3>Artist</h3>
-          <h3>Song</h3>
+          <h3>View Song</h3>
+          <h3>Delete</h3>
+          <h3>Edit</h3>
         </div>
-        <div id="song-list"></div>
+        <div id="song-list">
+            
+        </div>
     </div>
+    
+    <form id="insert-form">
+        <label for="title">Add title</label>
+     <input type="text" id="title" placeholder="Song Title" >
+       <br><br>
+       <label for="artist">Artist</label>
+    <input type="text" id="artist" placeholder="Artist">
+       <br><br>
+       <label for="genre">Select genre</label>
+    <select id="genre">
+    <option>K-pop Music</option>
+    <option>Bollywood Music</option>
+    <option>Hip-Hop Music</option>
+    <option>Pop Music</option>
+    <option>Lo-Fi Music</option>
+    <option>Classical Music</option>
+    <option>Instrumental Music</option>
+    <option>Punjabi Songs</option>
+    </select>
+       <br><br>
+       <label for="youtubeLink">Youtube Link</label>
+    <input type="text" id="youtubeLink" placeholder="YouTube Link">
+         <br><br>
+
+    <button type="submit">
+        Add Song
+    </button>
+   </form>
     <script src="music.js"></script>
 </body>
 </html>

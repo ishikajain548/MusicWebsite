@@ -291,7 +291,7 @@ let songs = [
 const container = document.querySelector("#song-list");
 
 const form = document.getElementById("insert-form");
-
+const formBtn = document.getElementById("form-btn");
 let editId = null;
 
 function displaySongs(songsArray) {
@@ -323,6 +323,7 @@ function displaySongs(songsArray) {
        container.innerHTML = "";
       header.innerHTML = "";
       form.style.display = "block";
+      formBtn.textContent="Edit Song"
       title.value = song.title;
       artist.value = song.artist;
       genre.value = song.genre;
@@ -334,6 +335,7 @@ function displaySongs(songsArray) {
     songdiv.appendChild(btn);
     songdiv.appendChild(deleteBtn);
     songdiv.appendChild(editBtn);
+    form.appendChild(formBtn);
     container.appendChild(songdiv);
   });
 }
@@ -358,6 +360,7 @@ insertbtn.addEventListener("click", () => {
   container.innerHTML = "";
   header.innerHTML = "";
   form.style.display = "block";
+  formBtn.textContent="Add Song";
   form.reset();
   editId = null;
 });
@@ -377,7 +380,14 @@ form.addEventListener("submit", (e) => {
       genre: newGenre,
       youtubeLink: newYoutubeLink,
     };
-    songs.push(obj);
+    if(newTitle!=="" && newArtist!=="" && newGenre!=="" && newYoutubeLink!=="")
+    {
+      songs.push(obj);
+    }
+    else
+    {
+      alert("please add all the required fields.")
+    }
   } else {
     let editSong = songs.find((s) => s.id === editId);
     editSong.title = newTitle;

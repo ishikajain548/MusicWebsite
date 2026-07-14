@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Music List</title>
 </head>
@@ -28,23 +29,28 @@
           <h3>Title</h3>
           <h3>Artist</h3>
           <h3>View Song</h3>
-          <h3>Delete</h3>
-          <h3>Edit</h3>
+          <h3><i class="fa fa-trash"></i>  Delete</h3>
+          <h3><i class="fa fa-edit"></i>  Edit</h3>
         </div>
         <div id="song-list">
             
         </div>
     </div>
-    
+    <div class="form">
     <form id="insert-form">
+        <div class="form-row">
         <label for="title">Add title</label>
-     <input type="text" id="title" placeholder="Song Title" >
+        <input type="text" id="title" placeholder="Song Title" class="input-field">
+        </div>
+         <br><br>
+        <div class="form-row">
+         <label for="artist">Artist</label>
+    <input type="text" id="artist" placeholder="Artist" class="input-field">
+        </div>
        <br><br>
-       <label for="artist">Artist</label>
-    <input type="text" id="artist" placeholder="Artist">
-       <br><br>
+       <div class="form-row">
        <label for="genre">Select genre</label>
-    <select id="genre">
+     <select id="genre" class="input-field">
     <option>K-pop Music</option>
     <option>Bollywood Music</option>
     <option>Hip-Hop Music</option>
@@ -54,15 +60,20 @@
     <option>Instrumental Music</option>
     <option>Punjabi Songs</option>
     </select>
+       </div>
        <br><br>
+       <div class="form-row">
        <label for="youtubeLink">Youtube Link</label>
-    <input type="text" id="youtubeLink" placeholder="YouTube Link">
+    <input type="text" id="youtubeLink" placeholder="YouTube Link" class="input-field">
+       </div>
          <br><br>
-
-    <button type="submit">
+      <div class="form-row">
+    <button type="submit" id="form-btn">
         Add Song
     </button>
+      </div>
    </form>
+   </div>
     <script src="music.js"></script>
 </body>
 </html>

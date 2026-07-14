@@ -322,6 +322,7 @@ function displaySongs(songsArray) {
     editBtn.addEventListener("click", () => {
        container.innerHTML = "";
       header.innerHTML = "";
+      header.textContent="Edit Song";
       form.style.display = "block";
       formBtn.textContent="Edit Song"
       title.value = song.title;
@@ -401,3 +402,5 @@ form.addEventListener("submit", (e) => {
   form.reset();
   form.style.display = "none";
 });
+ 
+

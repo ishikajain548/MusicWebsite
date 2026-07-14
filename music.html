@@ -7,19 +7,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Music List</title>
+    <script>
+      function myFunction() {
+    const navItems = document.querySelectorAll(".nav-class");
+   
+    navItems.forEach(item => {
+        item.classList.toggle("active");
+    }); 
+}
+    </script>
 </head>
 <body>
-    <div class="nav">
+    <div class="nav" id="navbar">
         <nav>
         <ul>
-            <img src="images/icon.png" alt="logo" class="logo-img">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="music.html">All Songs</a></li>
+            <img src="images/icon.png" alt="logo" class="logo-img" >
+          
+
+             <a href="javascript:void(0);" class="icon de-active" onclick="myFunction()">
+                    <i class="fa fa-bars left"></i>
+               </a>
+
+            <li><a href="index.html" class="nav-class">Home</a></li>
+            <li><a href="music.html" class="nav-class">All Songs</a></li>
+             
             <div class="search-container">
-                <input type="text" id="search" placeholder="Search songs..">
+                <input type="text" id="search" placeholder="Search songs.." class="nav-class">
             </div>
             <div>
-                <button id="insert">Add Song</button>
+                <button id="insert" class="nav-class">Add Song</button>
             </div>
         </ul>
         </nav>

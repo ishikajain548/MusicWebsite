@@ -18,6 +18,12 @@ body{
     font-size: x-large;
     gap: 20px;
 }
+#container{
+    display: flex;
+    margin:30px;
+     flex-wrap: wrap; 
+
+}
 .container{
      display: flex; 
      flex-wrap: wrap; 

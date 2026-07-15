@@ -8,20 +8,51 @@
             color:wheat;
             font-size: 30px;
             cursor: pointer;
-            position:absolute;
-            left:195px;
-            top:35px;
         }
      
         @media (max-width:768px) {
+            nav{
+                width:100%;
+                padding:15px;
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap:7px;
+                position: relative;
+            }
+            .logo-img{
+                width:60px;
+                height:60px;
+                margin-left: 0px;
+            }
+            #navbar .icon{
+               display: block;
+               position: absolute;
+               top:18px;
+               right:10px;
+               left:auto;
+            }
             .nav-class{
                 display: none;
+                width:100%;
             }
-          #navbar .icon{
-            display: block;
-           }
+            li{
+                padding: 0;
+                width: 100%;
+            }
+            .search-container{
+                width: 100%;
+            }
+            #search{
+                width: 100%;
+            }
+            #insert{
+                width:100%;
+            }
            .nav-class.active{
-            display:grid;
+            display:block;
            }
         }
 body{
@@ -38,36 +69,16 @@ body{
     font-size: x-large;
     gap: 80px;
 }
-@media (max-width:425px)
-{
-    #song-list{
-        margin-left: 186px;
-    }
-    .header{
-        gap:30px;
-        margin-left:177px;
-    }
-  
-}
+
 @media (max-width:768px)
 {
-   
-.search-container{
-    width: 200px;
-}
-nav{
-    padding:15px 25px;
-    gap:10px;
-}
-ul{
-    gap:10px;
-}
-.header{
-    font-size: medium;
-}
-.songD{
-    gap: 10px;
-}
+    .container{
+        overflow-x: auto;
+    }
+    .header,.songD{
+        min-width: 750px;
+        gap:20px;
+    }
 }
 #container{
     display: flex;
@@ -76,11 +87,9 @@ ul{
 
 }
 .container{
-     display: flex; 
-     flex-wrap: wrap; 
-    margin:0px 25px;
-    justify-content: center;
-    align-items: center;
+    width:95%;
+    margin: auto;
+    overflow-x: auto;
 }
 .nav{
      display: flex;
@@ -100,7 +109,7 @@ nav{
 
 ul{
     display: flex;
-    gap: 30px;
+    gap: 15px;
 }
 
 li{
@@ -119,7 +128,8 @@ li a{
     gap: 5px;
 }
 #search{
-    width:400px;
+    width:100%;
+    max-width: 400px;
     padding: 12px 18px;
     font-size: 16px;
      background-color:rgb(145, 143, 138);
@@ -134,6 +144,7 @@ li a{
 }
 .card{
     width:300px;
+    max-width: 100%;
     height:333px;
     border:2px solid #ccc;
     border-radius:15px;
@@ -168,6 +179,25 @@ li a{
 .card button:hover{
     background-color: grey;
 }
+@media (max-width:768px)
+{
+    #container{
+        justify-content: center;
+    }
+    .card{
+        width:90%;
+        max-width: 321px;
+    }
+    #music-container{
+        width:95%;
+        margin: auto;
+        overflow-x:auto ;
+    }
+      #music-container .header,
+    #music-container .songD{
+        min-width:500px;
+    }
+}
 .heading{
     text-align: center;
     padding: 25px;
@@ -176,11 +206,15 @@ li a{
     font-size: xx-large;
 }
 
-#music-container{
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    margin: 40px auto;
+#music-container .header{
+    display:grid;
+    grid-template-columns:3fr 3fr 2fr;
+    gap:20px;
+}
+#music-container .songD{
+        display:grid;
+    grid-template-columns:3fr 3fr 2fr;
+    gap:20px;
 }
 
 .songD{
@@ -260,11 +294,11 @@ li a{
     display: flex;
     justify-content: center;
     border: 2px solid wheat;
-    padding: 52px;
-    margin: 20px;
+    padding: 35px;
+    margin: 30px auto;
     border-radius: 36px;
-    width: 46%;
-    margin-left: 304px;
+    width:90%;
+    max-width: 700px;
 }
 
 .form-row{
@@ -295,31 +329,26 @@ li a{
     outline: none;
 }
 
-    @media (max-width:425px)
-    {
-        .form-row{
-            gap:0px;
-            display: block;
-        }
-        #form-btn{
-            margin-left:77px;
-        }
-        .input-field{
-            width:212px;
-        }
-    }
+
     @media(max-width:768px)
     {
         .form{
-            width:58%;
-            margin-left:182px;
+            width:95%;
+            padding:25px;
         }
-        .logo-img{
-            margin-left:58px;
+        .form-row{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap:10px;
         }
+        .input-field{
+            width:100%;
+        }
+        #form-btn{
+            margin-left: 0;
+            width:100%;
+        }
+       
     }
-    .left{
-        margin-left:0px;
-        position:absolute;
-   
-    }
+    

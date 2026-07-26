@@ -1,95 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
     <title>Music List</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
     <script>
-      function myFunction() {
-    const navItems = document.querySelectorAll(".nav-class");
-   
-    navItems.forEach(item => {
-        item.classList.toggle("active");
-    }); 
+       function myFunction() {
+    document.querySelector(".nav-links").classList.toggle("active");
 }
     </script>
+
 </head>
+
 <body>
-    <div class="nav" id="navbar">
-        <nav>
-        <ul>
-            <img src="images/icon.png" alt="logo" class="logo-img" >
-          
 
-             <a href="javascript:void(0);" class="icon de-active" onclick="myFunction()">
-                    <i class="fa fa-bars left"></i>
-               </a>
+    <!-- Navbar -->
+<div class="nav" id="navbar">
+    <nav>
 
-            <li><a href="index.html" class="nav-class">Home</a></li>
-            <li><a href="music.html" class="nav-class">All Songs</a></li>
-             
-            <div class="search-container">
-                <input type="text" id="search" placeholder="Search songs.." class="nav-class">
-            </div>
-            <div>
-                <button id="insert" class="nav-class">Add Song</button>
-            </div>
+       
+
+            <img src="images/icon.png"
+                 alt="logo"
+                 class="logo-img">
+
+            <a href="javascript:void(0);"
+               class="icon"
+               onclick="myFunction()">
+
+                <i class="fa fa-bars"></i>
+
+            </a>
+
+       
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html" >Home</a>
+            </li>
+
+            <li>
+                <a href="music.html" >All Songs</a>
+            </li>
+
+            <li class="search-container">
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search songs..."
+                   >
+            </li>
+
+            <li>
+                <button id="insert" class="nav-class">
+                    Add Song
+                </button>
+            </li>
+
         </ul>
-        </nav>
-    </div>
+
+    </nav>
+</div>
+    <!-- Page Heading -->
+
+    <h2 id="page-heading" class="heading"></h2>
+
+    <!-- Song List -->
+
     <div class="container">
-       <div class="header">
-          <h3>Title</h3>
-          <h3>Artist</h3>
-          <h3>View Song</h3>
-          <h3><i class="fa fa-trash"></i>  Delete</h3>
-          <h3><i class="fa fa-edit"></i>  Edit</h3>
+
+        <div class="header" id="header">
+
+            <h3>Title</h3>
+            <h3>Artist</h3>
+            <h3>View</h3>
+            <h3>Delete</h3>
+            <h3>Edit</h3>
+
         </div>
-        <div id="song-list">
-            
-        </div>
+
+        <div id="song-list"></div>
+
     </div>
+
+    <!-- Form -->
+
     <div class="form">
-    <form id="insert-form">
-        <div class="form-row">
-        <label for="title">Add title</label>
-        <input type="text" id="title" placeholder="Song Title" class="input-field">
-        </div>
-         <br><br>
-        <div class="form-row">
-         <label for="artist">Artist</label>
-    <input type="text" id="artist" placeholder="Artist" class="input-field">
-        </div>
-       <br><br>
-       <div class="form-row">
-       <label for="genre">Select genre</label>
-     <select id="genre" class="input-field">
-    <option>K-pop Music</option>
-    <option>Bollywood Music</option>
-    <option>Hip-Hop Music</option>
-    <option>Pop Music</option>
-    <option>Lo-Fi Music</option>
-    <option>Classical Music</option>
-    <option>Instrumental Music</option>
-    <option>Punjabi Songs</option>
-    </select>
-       </div>
-       <br><br>
-       <div class="form-row">
-       <label for="youtubeLink">Youtube Link</label>
-    <input type="text" id="youtubeLink" placeholder="YouTube Link" class="input-field">
-       </div>
-         <br><br>
-      <div class="form-row">
-    <button type="submit" id="form-btn">
-        Add Song
-    </button>
-      </div>
-   </form>
-   </div>
-    <script src="music.js"></script>
+
+        <form id="insert-form">
+
+            <div class="form-row">
+
+                <label for="title">Song Title</label>
+
+                <input
+                    type="text"
+                    id="title"
+                    class="input-field"
+                    placeholder="Song Title">
+
+            </div>
+
+            <br><br>
+
+            <div class="form-row">
+
+                <label for="artist">Artist</label>
+
+                <input
+                    type="text"
+                    id="artist"
+                    class="input-field"
+                    placeholder="Artist Name">
+
+            </div>
+
+            <br><br>
+
+            <div class="form-row">
+
+                <label for="genre">Genre</label>
+
+                <select id="genre" class="input-field">
+
+                    <option>K-pop Music</option>
+                    <option>Bollywood Music</option>
+                    <option>Hip-Hop Music</option>
+                    <option>Pop Music</option>
+                    <option>Lo-Fi Music</option>
+                    <option>Classical Music</option>
+                    <option>Instrumental Music</option>
+                    <option>Punjabi Songs</option>
+
+                </select>
+
+            </div>
+
+            <br><br>
+
+            <div class="form-row">
+
+                <label for="youtubeLink">Youtube Link</label>
+
+                <input
+                    type="text"
+                    id="youtubeLink"
+                    class="input-field"
+                    placeholder="https://youtube.com/...">
+
+            </div>
+
+            <br><br>
+
+            <div class="form-row">
+
+                <button type="submit" id="form-btn">
+                    Add Song
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- JS -->
+
+    <div id="videoModal" class="modal">
+    <div class="modal-content">
+
+        <span id="closeModal">&times;</span>
+
+        <iframe
+            id="youtubeFrame"
+            width="100%"
+            height="450"
+            src=""
+            allowfullscreen>
+        </iframe>
+
+    </div>
+</div>
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/music.js"></script>
+
+    
 </body>
+
 </html>

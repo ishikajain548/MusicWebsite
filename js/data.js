@@ -1,3 +1,54 @@
+const albums=[
+    {
+     id:1,
+     genre:"K-pop Music",
+     img:"images/kpop.webp",
+     buttonText:"View Songs"
+    },
+    {
+       id:2,
+     genre:"Bollywood Music",
+     img:"images/bollywood-music.avif",
+     buttonText:"View Songs"
+    },
+    {
+       id:3,
+     genre:"Classical Music",
+     img:"images/classical.avif",
+     buttonText:"View Songs"
+    },
+    {
+         id:4,
+     genre:"Hip-Hop Music",
+     img:"images/hip-hop.avif",
+     buttonText:"View Songs"
+    },
+    {
+         id:5,
+     genre:"Instrumental Music",
+     img:"images/instrumental.avif",
+     buttonText:"View Songs"
+    },
+    {
+         id:6,
+     genre:"Lo-Fi Music",
+     img:"images/lofi.avif",
+     buttonText:"View Songs"
+    },
+    {
+         id:7,
+     genre:"Pop Music",
+     img:"images/pop.avif",
+     buttonText:"View Songs"
+    },
+    {
+         id:8,
+     genre:"Punjabi Songs",
+     img:"images/punjabi.jpg",
+     buttonText:"View Songs"
+    }
+]
+
 let songs = [
   {
     id: 1,
@@ -287,120 +338,3 @@ let songs = [
     youtubeLink: "https://www.youtube.com/watch?v=cl0a3i2wFcc",
   },
 ];
-
-const container = document.querySelector("#song-list");
-
-const form = document.getElementById("insert-form");
-const formBtn = document.getElementById("form-btn");
-let editId = null;
-
-function displaySongs(songsArray) {
-  container.innerHTML = "";
-  songsArray.forEach((song) => {
-    const songdiv = document.createElement("div");
-    songdiv.className = "songD";
-    const p1 = document.createElement("p");
-    p1.textContent = song.title;
-    const p2 = document.createElement("p");
-    p2.textContent = song.artist;
-    const btn = document.createElement("button");
-    btn.textContent = "View This Song";
-    btn.addEventListener("click", () => {
-      window.location.href = `${song.youtubeLink}`;
-    });
-    btn.className = "bt";
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
-    deleteBtn.id = "delete";
-    deleteBtn.addEventListener("click", () => {
-      songs = songs.filter((s) => s.id !== song.id);
-      displaySongs(songs);
-    });
-    const editBtn = document.createElement("button");
-    editBtn.textContent = "Edit";
-    editBtn.id = "edit";
-    editBtn.addEventListener("click", () => {
-       container.innerHTML = "";
-      header.innerHTML = "";
-      header.textContent="Edit Song";
-      form.style.display = "block";
-      formBtn.textContent="Edit Song"
-      title.value = song.title;
-      artist.value = song.artist;
-      genre.value = song.genre;
-      youtubeLink.value = song.youtubeLink;
-      editId = song.id;
-    });
-    songdiv.appendChild(p1);
-    songdiv.appendChild(p2);
-    songdiv.appendChild(btn);
-    songdiv.appendChild(deleteBtn);
-    songdiv.appendChild(editBtn);
-    form.appendChild(formBtn);
-    container.appendChild(songdiv);
-  });
-}
-
-displaySongs(songs);
-
-const search = document.getElementById("search");
-search.addEventListener("input", () => {
-  const value = search.value.toLowerCase();
-  const resultSongs = songs.filter((song) => {
-    return song.title.toLowerCase().includes(value);
-  });
-  displaySongs(resultSongs);
-});
-
-//insert and update form
-
-const header = document.querySelector(".header");
-
-const insertbtn = document.getElementById("insert");
-insertbtn.addEventListener("click", () => {
-  container.innerHTML = "";
-  header.innerHTML = "";
-  form.style.display = "block";
-  formBtn.textContent="Add Song";
-  form.reset();
-  editId = null;
-});
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let newTitle = title.value;
-  let newArtist = artist.value;
-  let newGenre = genre.value;
-  let newYoutubeLink = youtubeLink.value;
-  //it means that song has not yet added we can insert it
-  if (editId === null) {
-    const obj = {
-      id: songs.length + 1,
-      title: newTitle,
-      artist: newArtist,
-      genre: newGenre,
-      youtubeLink: newYoutubeLink,
-    };
-    if(newTitle!=="" && newArtist!=="" && newGenre!=="" && newYoutubeLink!=="")
-    {
-      songs.push(obj);
-    }
-    else
-    {
-      alert("please add all the required fields.")
-    }
-  } else {
-    let editSong = songs.find((s) => s.id === editId);
-    editSong.title = newTitle;
-    editSong.artist = newArtist;
-    editSong.genre = newGenre;
-    editSong.youtubeLink = newYoutubeLink;
-    editId = null;
-  }
-
-  displaySongs(songs);
-  form.reset();
-  form.style.display = "none";
-});
- 
-
